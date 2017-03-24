@@ -3,7 +3,8 @@
  * of a valid Seneca College email address, `false` othewise.
  */
 exports.isValidEmail = function(email) {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+  var emailDomain = "myseneca.ca";
+  if (/^\w+([\.-]?\w+)*@(myseneca.ca)/.test(email)) {
       return (true);
   }
   return (false);
