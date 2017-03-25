@@ -4,9 +4,9 @@
  * @param {email} email address to be validated
  * @return {boolean} Indicating successful validation (true), or false.
  */
-exports.isValidEmail = function(email) {
-  if (/^\w+([\.-]?\w+)*@\w*(seneca)\w*(.ca)/.test(email)) {
-      return (true);
+exports.isValidEmail = function isValidEmail(email) {
+  if (/^\w+([.-]?\w+)*@\w*(seneca)\w*(.ca)/.test(email)) {
+    return (true);
   }
   return (false);
 };
@@ -17,11 +17,11 @@ exports.isValidEmail = function(email) {
  * @param {name} name is the argument / username
  * @return {String} String containing the formatted email address.
  */
-exports.formatSenecaEmail = function(name) {
+exports.formatSenecaEmail = function formatSenecaEmail(name) {
   if (name != null) {
     name.trim();
     return name.concat('@myseneca.ca');
   }
 
-  return "Error: Invalid Argument";
+  return 'Error: Invalid Argument';
 };
