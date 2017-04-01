@@ -5,10 +5,7 @@
  * @return {boolean} Indicating successful validation (true), or false.
  */
 exports.isValidEmail = function isValidEmail(email) {
-  if (/^\w+([.-]?\w+)*@\w*(seneca)\w*(.ca)/.test(email)) {
-    return (true);
-  }
-  return (false);
+  return /^\w+([.-]?\w+)*@\w*(seneca)\w*(.ca)/.test(email);
 };
 
 /**
